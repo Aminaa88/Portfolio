@@ -359,20 +359,60 @@
             <h3>My Work</h3>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/300x200/ffbd95/000?text=Project+1" alt="Project 1">
+                    <img src="https://1.jpg/300x200/ffbd95/000?text=Project+1" alt="Project 1">
                     <h4>Brand Redesign</h4>
                     <p>A complete visual overhaul for a startup.</p>
                 </div>
                 <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/300x200/ffbd95/000?text=Project+2" alt="Project 2">
+                    <img src="https://Ad Review.png/300x200/ffbd95/000?text=Project+2" alt="Project 2">
                     <h4>Social Media Campaign</h4>
                     <p>Increased engagement by 200% for a client.</p>
                 </div>
                 <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/300x200/ffbd95/000?text=Project+3" alt="Project 3">
+                    <img src="Logo.jpg/300x200/ffbd95/000?text=Project+3" alt="Project 3">
                     <h4>Logo Design</h4>
                     <p>Custom logo for a tech company.</p>
                 </div>
+                <div class="portfolio-item">
+                    <img src="Post.jpg" alt="Project 2">
+                    <h4>Social Media Banner</h4>
+                    <p>Increased engagement by 200% for a client.</p>
+                </div>
+                <div class="simple-slider">
+    <div class="mySlides fade">
+        <img src="Carosuel.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="Carosuel 1.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="Carousel 2.jpeg" style="width:100%">
+    </div>
+</div>
+
+<style>
+    .simple-slider { max-width: 1000px; position: relative; margin: auto; overflow: hidden; }
+    .mySlides { display: none; }
+    .mySlides img { border-radius: 15px; height: 450px; object-fit: cover; } /* Height aap marzi se kam kar sakti hain */
+    .fade { animation: fadeAnim 1.5s; }
+    @keyframes fadeAnim { from {opacity: .4} to {opacity: 1} }
+</style>
+
+<script>
+    let sIndex = 0;
+    showMySlides();
+
+    function showMySlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+        sIndex++;
+        if (sIndex > slides.length) {sIndex = 1}
+        slides[sIndex-1].style.display = "block";
+        setTimeout(showMySlides, 3000); // Har 3 second baad badlega
+    }
+</script>
             </div>
         </div>
     </section>
