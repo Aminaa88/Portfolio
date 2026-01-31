@@ -3,42 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syeda Amina | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Syeda Amina - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; overflow-x: hidden; }
         
-        /* Navigation */
-        header { position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.9); padding: 15px 0; z-index: 1000; }
+        header { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.9); padding: 15px 0; z-index: 1000; }
         nav { display: flex; justify-content: space-around; align-items: center; }
-        nav h1 { color: #ffbd95; font-size: 1.5rem; }
-        nav a { color: #fff; text-decoration: none; margin: 0 15px; }
+        nav h1 { color: #ffbd95; }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 30px; }
+        nav ul li a { color: #fff; text-decoration: none; }
 
-        /* SECTION 1: HERO (BLUE) */
+        /* 1. HERO SECTION (BLUE) */
         .hero { 
             height: 100vh; 
             background: linear-gradient(90deg, #000000, #3533cd); 
             display: flex; align-items: center; justify-content: center; text-align: center; color: white;
         }
-        .hero-img { width: 350px; border-radius: 20px; border: 3px solid #ffbd95; margin-bottom: 20px; }
+        .hero-img { width: 320px; border-radius: 20px; border: 3px solid #ffbd95; margin-bottom: 20px; }
 
-        /* SECTION 2: ABOUT (WHITE) */
-        .white-section { background: #ffffff; color: #000; padding: 80px 20px; text-align: center; }
-        .white-section h2 { color: #3533cd; margin-bottom: 20px; font-size: 2.5rem; }
+        /* 2. ABOUT SECTION (WHITE) */
+        .about { background: #ffffff; color: #000; padding: 80px 20px; text-align: center; }
+        .about h3 { font-size: 2.5rem; color: #3533cd; margin-bottom: 20px; }
 
-        /* SECTION 3: SERVICES (BLUE) */
-        .blue-section { background: linear-gradient(90deg, #000000, #3533cd); color: #fff; padding: 80px 20px; text-align: center; }
-        .blue-section h2 { color: #ffbd95; margin-bottom: 20px; font-size: 2.5rem; }
+        /* 3. EXPERIENCE & SERVICES (BLUE) */
+        .services-section { background: linear-gradient(90deg, #000000, #3533cd); color: #fff; padding: 80px 20px; text-align: center; }
+        .services-section h3 { color: #ffbd95; font-size: 2.5rem; margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1000px; margin: auto; }
+        .card { background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2); }
+        .card i { font-size: 2.5rem; color: #ffbd95; margin-bottom: 15px; }
 
-        /* SECTION 4: PROJECTS CAROUSEL (WHITE) */
-        .projects-carousel-section { background: #ffffff; color: #000; padding: 80px 20px; text-align: center; }
-        .projects-carousel-section h2 { color: #3533cd; margin-bottom: 30px; }
+        /* 4. PROJECTS CAROUSEL (WHITE) */
+        .portfolio-carousel { background: #ffffff; color: #000; padding: 80px 20px; text-align: center; }
+        .portfolio-carousel h3 { color: #3533cd; font-size: 2.5rem; margin-bottom: 30px; }
         .slideshow-container { max-width: 600px; margin: auto; position: relative; }
         .mySlides { display: none; }
-        .mySlides img { width: 100%; border-radius: 15px; height: 400px; object-fit: cover; border: 5px solid #3533cd; }
+        .mySlides img { width: 100%; border-radius: 20px; height: 400px; object-fit: cover; border: 5px solid #3533cd; }
 
-        .btn { background: #ffbd95; color: #000; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; font-weight: bold; }
+        /* 5. CONTACT (BLUE) */
+        .contact { background: linear-gradient(90deg, #000000, #3533cd); color: #fff; padding: 80px 20px; text-align: center; }
+        form { max-width: 500px; margin: auto; }
+        form input, form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: #fff; }
+        .btn { background: #ffbd95; color: #000; padding: 15px 35px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1rem; }
+
         .fade { animation: fade 1.5s; }
         @keyframes fade { from {opacity: .4} to {opacity: 1} }
     </style>
@@ -48,59 +58,71 @@
     <header>
         <nav>
             <h1>Syeda Amina</h1>
-            <div>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <section class="hero">
         <div>
             <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80" class="hero-img">
-            <h1>Syeda Amina</h1>
+            <h2>Syeda Amina</h2>
             <p>Graphic Designer & Digital Marketing Expert</p>
-            <a href="#projects" class="btn">View My Work</a>
         </div>
     </section>
 
-    <section id="about" class="white-section">
-        <h2>About Me</h2>
-        <p style="max-width: 800px; margin: auto;">I am a certified professional with 2 years of experience. I specialize in creating brand identities and driving growth through strategic digital marketing.</p>
+    <section id="about" class="about">
+        <h3>About Me</h3>
+        <p style="max-width: 800px; margin: auto; font-size: 1.1rem;">Certified professional with 2 years of experience. I help brands grow by combining creative design with powerful digital marketing strategies.</p>
     </section>
 
-    <section id="services" class="blue-section">
-        <h2>My Services</h2>
-        <p>Social Media Marketing | Google & FB Ads | Graphic Design | Content Strategy</p>
+    <section id="services" class="services-section">
+        <h3>My Expertise</h3>
+        <div class="grid">
+            <div class="card"><i class="fas fa-palette"></i><h4>Design</h4></div>
+            <div class="card"><i class="fab fa-facebook"></i><h4>Ads</h4></div>
+            <div class="card"><i class="fas fa-chart-line"></i><h4>SMM</h4></div>
+            <div class="card"><i class="fas fa-tasks"></i><h4>Management</h4></div>
+        </div>
     </section>
 
-    <section id="projects" class="projects-carousel-section">
-        <h2>My Projects</h2>
+    <section id="portfolio" class="portfolio-carousel">
+        <h3>My Projects</h3>
         <div class="slideshow-container">
             <div class="mySlides fade"><img src="Carousel.jpg"></div>
             <div class="mySlides fade"><img src="Carosuel 2.jpeg"></div>
             <div class="mySlides fade"><img src="Carousel 1.jpeg"></div>
             <div class="mySlides fade"><img src="Post.jpg"></div>
+            <div class="mySlides fade"><img src="Logo.jpg"></div>
+            <div class="mySlides fade"><img src="1.jpg"></div>
         </div>
-        <p style="margin-top:20px; font-weight:bold;">Scroll to see my latest designs</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h3>Work Together</h3>
+        <form action="https://formspree.io/f/YOUR_ID" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Project Details" rows="4" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
 
     <script>
         let slideIndex = 0;
-        showSlides();
-
         function showSlides() {
             let slides = document.getElementsByClassName("mySlides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
+            for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
             slideIndex++;
             if (slideIndex > slides.length) {slideIndex = 1}    
             slides[slideIndex-1].style.display = "block";  
             setTimeout(showSlides, 3000); 
         }
+        showSlides();
     </script>
-
 </body>
 </html>
